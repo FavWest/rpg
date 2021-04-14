@@ -27,4 +27,8 @@ export default class Character {
     }
   return this.currentHP;
   }
+
+  attack(target, attackType, damage) {
+    
+  }
 };

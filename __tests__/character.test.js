@@ -2,9 +2,11 @@ import Character from '../src/js/character.js';
 
 describe('Character', () => {
   let myFighter;
+  let slime;
   
   beforeEach(() => {
     myFighter = new Character("Trog", "Warrior", 1, 3, 2, 10, {skills: ["climb"], weapons: ["plain sword"]});
+    slime = new Character("Slime", "slime", 1, 1, 1, 5, {});
   });
   
   test ('should create a Character object', () => {
@@ -40,6 +42,13 @@ describe('Character', () => {
     myFighter.currentHP = (9);
     expect(myFighter.raiseCurrentHP(3)).toEqual(10);
   });
+
+  test ('one character should be able to attack another, lowering their HP', () => {
+    myFighter.physical=0;
+    slime.attack(myFighter, "physical", 1);
+    expect(myFighter.currentHP).toEqual(9);
+  });
+
   // test ('shoud change hp property based on damage taken', () => {
     
   // })
