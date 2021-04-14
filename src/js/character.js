@@ -1,5 +1,5 @@
 export default class Character {
-  constructor (name, role, level, physical, mental, hp, inventory){
+  constructor (name, role, level, physical, mental, hp, inventory) {
     this.name=name;
     this.role=role;
     this.level=level;
@@ -10,14 +10,17 @@ export default class Character {
     this.inventory=inventory;
   }
 
-  physicalAttack(){
+  physicalAttack() {
     return this.physical;
   }
-  mentalAttack(){
+  mentalAttack() {
     return this.mental;
   }
-  lowerCurrentHP(damage){
+  lowerCurrentHP(damage) {
     this.currentHP -= damage;
     return this.currentHP;
+  }
+  raiseCurrentHP(heal) {
+
   }
 }
