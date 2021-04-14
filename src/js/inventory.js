@@ -1,3 +1,5 @@
+import db_armor from "./armor.js"
+
 export default class Inventory {
     constructor(skills, armor, weapons, consumables) {
         this.skills = {
