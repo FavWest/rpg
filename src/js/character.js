@@ -13,6 +13,6 @@ export default class Character {
     return this.physical;
   }
   mentalAttack(){
-    
+    return this.mental;
   }
 }
