@@ -8,31 +8,40 @@ export default class Character {
     this.currentHP=hp;
     this.maxHP=hp;
     this.inventory=inventory;
+    this.equippedArmor = 0;
+    this.physicalDmgBonus = 0;
   }
+
+
   physicalAttack() {
-    return this.physical;
+    let damage=this.physical; // + this.physicalDmgBonus
+    //this.attack(target, "physical", damage);
+    return damage;
   }
+
   mentalAttack() {
     return this.mental;
   }
+
   lowerCurrentHP(damage) {
     this.currentHP -= damage;
     return this.currentHP;
   }
+  
   raiseCurrentHP(heal) {
     if (this.currentHP + heal > this.maxHP) {
       this.currentHP = this.maxHP;
     } else {
       (this.currentHP += heal);
     }
-  return this.currentHP;
+    return this.currentHP;
   }
 
   attack(target, attackType, damage) {
     if (attackType==="physical"){
-      damage -= target.physical;
+      damage -= target.physical; // + target.physicalDefBonus
     } else {
-      damage -= target.mental;
+      damage -= target.mental; // + target.mentalDefBonus
     }
     target.lowerCurrentHP(damage);
     return damage;
