@@ -12,5 +12,7 @@ export default class Character {
   physicalAttack(){
     return this.physical;
   }
-
+  mentalAttack(){
+    
+  }
 }
