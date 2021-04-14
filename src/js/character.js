@@ -16,7 +16,8 @@ export default class Character {
   mentalAttack(){
     return this.mental;
   }
-  lowerCurrentHP(){
-
+  lowerCurrentHP(damage){
+    this.currentHP -= damage;
+    return this.currentHP;
   }
 }
