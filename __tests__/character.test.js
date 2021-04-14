@@ -13,7 +13,8 @@ describe('Character', () => {
     expect(myFighter.level).toEqual(1);
     expect(myFighter.physical).toEqual(3);
     expect(myFighter.mental).toEqual(2);
-    expect(myFighter.hp).toEqual(10);
+    expect(myFighter.currentHP).toEqual(10);
+    expect(myFighter.maxHP).toEqual(10);
     expect(myFighter.inventory.skills).toEqual(["climb"]);
     expect(myFighter.inventory.weapons).toEqual(["plain sword"]);
   });
@@ -25,6 +26,12 @@ describe('Character', () => {
   test ('should return a value equal to mental for attack damage', () => {
     expect(myFighter.mentalAttack()).toEqual(2);
   });
+  test ('should return the hp value of the character' , () => {
+    expect(myFighter.currentHP).toEqual(10);
+  })
+  test ('should lower currentHP and return the new currentHP' , () => {
+    expect(myFighter.lowerCurrentHP(3)).toEqual(7);
+  })
   // test ('shoud change hp property based on damage taken', () => {
     
   // })

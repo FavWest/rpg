@@ -5,7 +5,8 @@ export default class Character {
     this.level=level;
     this.physical=physical;
     this.mental=mental;
-    this.hp=hp;
+    this.currentHP=hp;
+    this.maxHP=hp;
     this.inventory=inventory;
   }
 
@@ -14,5 +15,8 @@ export default class Character {
   }
   mentalAttack(){
     return this.mental;
+  }
+  lowerCurrentHP(){
+
   }
 }
