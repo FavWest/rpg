@@ -47,6 +47,7 @@ export default class Inventory {
     };
 };
 
+//testytest
 //chestPlate {
 //type: armor
 //class: warrior
