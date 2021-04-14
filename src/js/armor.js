@@ -1,4 +1,4 @@
-export const db_armor = [
+const ARMOR = [
     {
         name: "Light Armor",
         type: "armor",
@@ -35,3 +35,5 @@ export const db_armor = [
         mental: 10,
     },
 ]
+
+export default { ARMOR };

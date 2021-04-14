@@ -1,5 +1,7 @@
 import Inventory from './../src/js/inventory.js'
 
+import ARMOR from './../src/js/armor.js'
+
 describe('Inventory', () => {
     test("it should create a new inventory object with all skills set to false.", () => {
         const newInventory = new Inventory();
@@ -53,5 +55,12 @@ describe('Inventory', () => {
         const consumableItem = { type: "consumables" };
         expect(newInventory.acquireItem(consumableItem));
         expect((newInventory.consumables).includes(consumableItem)).toEqual(true);
+    });
+    test("it should find an 'armor' item based on its 'name' property", () => {
+        const newInventory = new Inventory();
+        const armorItem = newInventory.findItem(ARMOR, "Yearning Bone Batteplate");
+        expect(armorItem.name).toEqual("Yearning Bone Batteplate");
+        // expect(newInventory.acquireItem(armorItem));
+        // expect(newInventory.armor[0].name).toEqual("Yearning Bone Batteplate");
     });
 });
