@@ -20,7 +20,11 @@ export default class Character {
     return this.currentHP;
   }
   raiseCurrentHP(heal) {
-    this.currentHP += heal;
-    return this.currentHP;
+    if (this.currentHP + heal > this.maxHP) {
+      this.currentHP = this.maxHP;
+    } else {
+      (this.currentHP += heal);
+    }
+  return this.currentHP;
   }
-}
+};
