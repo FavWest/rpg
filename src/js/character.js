@@ -8,5 +8,9 @@ export default class Character {
     this.hp=hp;
     this.inventory=inventory;
   }
-}
 
+  physicalAttack(){
+    
+  }
+
+}

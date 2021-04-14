@@ -20,4 +20,10 @@ describe('Character', () => {
     expect(myFighter.inventory.skills).toEqual(["climb"]);
     expect(myFighter.inventory.weapons).toEqual(["plain sword"]);
   });
+
+  test ('should return a value equal to physical for attack damage', () => {
+    let myFighter = new Character("Trog", "Warrior", 1, 3, 2, 10, {skills: ["climb"], weapons: ["plain sword"]});
+    expect(myFighter.physicalAttack()).toEqual(3);
+  });
+  
 });
