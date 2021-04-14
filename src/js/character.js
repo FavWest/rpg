@@ -29,7 +29,11 @@ export default class Character {
   }
 
   attack(target, attackType, damage) {
-    damage -= target.physical;
+    if (attackType==="physical"){
+      damage -= target.physical;
+    } else {
+      damage -= target.mental;
+    }
     target.currentHP -= damage;
     return damage;
   }
