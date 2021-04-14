@@ -28,14 +28,18 @@ describe('Character', () => {
   });
   test ('should return the hp value of the character' , () => {
     expect(myFighter.currentHP).toEqual(10);
-  })
+  });
   test ('should lower currentHP and return the new currentHP' , () => {
     expect(myFighter.lowerCurrentHP(3)).toEqual(7);
-  })
+  });
   test ('should raise currentHP and return the new currentHP' , () => {
     myFighter.maxHP = (14);
     expect(myFighter.raiseCurrentHP(3)).toEqual(13);
-  })
+  });
+  test ('raiseCurrentHP() should not raise currentHP to exceed maxHP' , () => {
+    myFighter.currentHP = (9);
+    expect(myFighter.raiseCurrentHP(3)).toEqual(10);
+  });
   // test ('shoud change hp property based on damage taken', () => {
     
   // })

@@ -9,7 +9,6 @@ export default class Character {
     this.maxHP=hp;
     this.inventory=inventory;
   }
-
   physicalAttack() {
     return this.physical;
   }
