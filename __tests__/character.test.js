@@ -49,6 +49,11 @@ describe('Character', () => {
     expect(myFighter.currentHP).toEqual(9);
   });
 
+  test ('the physical property should reduce incoming damage from a physical attack', () => {
+    slime.attack(myFighter, "physical", 5);
+    expect(myFighter.currentHP).toEqual(8);
+  });
+
   // test ('shoud change hp property based on damage taken', () => {
     
   // })
