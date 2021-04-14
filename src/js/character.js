@@ -21,6 +21,7 @@ export default class Character {
     return this.currentHP;
   }
   raiseCurrentHP(heal) {
-
+    this.currentHP += heal;
+    return this.currentHP;
   }
 }

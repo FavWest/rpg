@@ -14,7 +14,7 @@ describe('Character', () => {
     expect(myFighter.physical).toEqual(3);
     expect(myFighter.mental).toEqual(2);
     expect(myFighter.currentHP).toEqual(10);
-    expect(myFighter.maxHP).toEqual(20);
+    expect(myFighter.maxHP).toEqual(10);
     expect(myFighter.inventory.skills).toEqual(["climb"]);
     expect(myFighter.inventory.weapons).toEqual(["plain sword"]);
   });
