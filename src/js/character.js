@@ -29,6 +29,8 @@ export default class Character {
   }
 
   attack(target, attackType, damage) {
+    damage -= target.physical;
     target.currentHP -= damage;
+    return damage;
   }
 };
