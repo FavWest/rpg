@@ -5,7 +5,7 @@ export default class Inventory {
         this.weapons = weapons;
         this.consumables = consumables;
     }
-}
+} fgyedasogfuyesf
 
 // this.skills = {an empty object that will take string values and set them to either true or false depending on item.}
 // every key value within Inventory will be another oject with preset key values that we can change to either true or false whether or not we have that item/ability.
