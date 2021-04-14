@@ -58,6 +58,7 @@ describe('Character', () => {
     slime.attack(myFighter, "mental", 5);
     expect(myFighter.currentHP).toEqual(7);
   });
+  
 
   // test ('shoud change hp property based on damage taken', () => {
     

@@ -34,7 +34,7 @@ export default class Character {
     } else {
       damage -= target.mental;
     }
-    target.currentHP -= damage;
+    target.lowerCurrentHP(damage);
     return damage;
   }
 };
