@@ -11,6 +11,7 @@ const db_roles = [
         mentalDefBonus: 0,
         physicalDmgBonus: 0,
         mentalDmgBonus: 0,
+        // inventory: enableSkill("climb")
     },
     {
         role: "mage",
