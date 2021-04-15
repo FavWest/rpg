@@ -22,7 +22,7 @@ describe('Tile', () => {
     expect(newTile.hasPlayer.name).toEqual("trog");
   });
 
-  test ('we should be able to push a player-object onto a tile player-array' , ()=> {
+  test ('should push a player-object onto a tile player-array' , ()=> {
     const trog = {
       name: "trog",
     }
@@ -30,4 +30,19 @@ describe('Tile', () => {
     ((newTile.entities).players).push(trog);
     expect((newTile.entities).players[0]).toEqual(trog);
   });
-});
+  
+  test ('should pop a player-object off of a tile player-array' , () => {
+    
+    const trog = {
+      name: "trog",
+    }
+    const ugg = {
+      name: "Ugg"
+    }
+    const newTile = new Tile(false, false, false, false);
+    ((newTile.entities).players).push(ugg);
+    ((newTile.entities).players).push(trog);
+    ((newTile.entities).players).pop();
+    expect ((newTile.entities).players).toEqual([ugg])
+  })
+});                                   

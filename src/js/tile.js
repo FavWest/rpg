@@ -10,6 +10,7 @@ export default class Tile {
       items: [],
     }
   }
+  
 }
 
 //let basic = new Tile(false, false, false, false)
