@@ -10,6 +10,7 @@ export default class Character {
     this.inventory=inventory;
     this.equippedArmor = 0;
     this.physicalDmgBonus = 0;
+    this.mentalDmgBonus = 0;
   }
 
   physicalAttack() {
@@ -19,7 +20,8 @@ export default class Character {
   }
 
   mentalAttack() {
-    return this.mental;
+    let damage=this.mental + this.mentalDmgBonus;
+    return damage;
   }
 
   lowerCurrentHP(damage) {
