@@ -13,7 +13,7 @@ export default class World {
           coordinates = [i, j];
           return coordinates;
         } else {
-          return "NOPE";
+          return ((this.board[0][1].entities).players).name;
         }
       }
     }
