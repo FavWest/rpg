@@ -35,3 +35,5 @@ const db_consumables = [
         mental: 15,
     },
 ]
+
+export default db_consumables

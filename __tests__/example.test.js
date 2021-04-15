@@ -1,4 +1,4 @@
-"import Example from '../src/js/example.js';
+import Example from '../src/js/example.js';
 import Character from '../src/js/character.js';
 
 describe('Example', () => {

@@ -35,3 +35,5 @@ const db_weapons = [
         mental: 1,
     },
 ]
+
+export default db_weapons
