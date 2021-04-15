@@ -46,13 +46,15 @@ describe('Tile', () => {
     expect ((newTile.entities).players).toEqual([ugg])
   });
 
-  test ('should move player from one tile to another' , () => {
-    const leftTile = new Tile(false, false, false, false);
-    const rightTile = new Tile(false, false, false, false);
-    const trog = { name: "trog" };
+  // test ('should move player from one tile to another' , () => {
+  //   const leftTile = new Tile(false, false, false, false);
+  //   const rightTile = new Tile(false, false, false, false);
+  //   const gameBoard = new World([leftTile, rightTile]);
 
-    ((leftTile.entities).players).push(trog);
-    leftTile.moveEntity(trog, "right");
-    expect ((rightTile.entities).players[0]).toEqual(trog);
-  });
+  //   const trog = { name: "trog" };
+
+  //   ((leftTile.entities).players).push(trog);
+  //   leftTile.moveEntity(trog, "right");
+  //   expect ((rightTile.entities).players[0]).toEqual(trog);
+  // });
 });

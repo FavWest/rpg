@@ -12,7 +12,18 @@ export default class Tile {
   }
   
   moveEntity(entity, moveDirection) {
+    // 
+    const name = entity.name; // get the entity's name
+    const playersArray = (this.entities).players;
 
+    for (i = 0; i < playersArray.length; i++) {
+      // see if the item in the array matches the name searched for
+      if (playersArray[i].name === name) {
+        playersArray.pop();
+        ((newTile.entities).players).push(entity);
+      }
+    }
+    this.entities.players // is an array of players on this tile
   }
 
 }

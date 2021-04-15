@@ -5,9 +5,8 @@ export default class World {
     this.items = {};
   }
 
-
-//   moveRight(){
-//   }
+  moveRight(){
+  }
 }
 
 // sandbox = {
