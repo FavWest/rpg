@@ -59,7 +59,7 @@ describe('Inventory', () => {
     test("it should find an 'armor' item based on its 'name' property", () => {
         const newInventory = new Inventory();
         const armorItem = newInventory.findItem(ARMOR, "Yearning Bone Batteplate");
-        expect(armorItem.name).toEqual("Yearning Bone Batteplate");
+        expect(armorItem).toEqual("Yearning Bone Batteplate");
         // expect(newInventory.acquireItem(armorItem));
         // expect(newInventory.armor[0].name).toEqual("Yearning Bone Batteplate");
     });

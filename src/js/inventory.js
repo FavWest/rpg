@@ -1,4 +1,4 @@
-import CONSTANTS from "./armor.js";
+import ARMOR from './armor.js';
 
 export default class Inventory {
     constructor(skills, armor, weapons, consumables) {
@@ -49,9 +49,11 @@ export default class Inventory {
     };
     findItem(database, itemName) {
         for (let i = 0; i < database.length; i++) {
-            if (database[i].name === itemName) {
+            if (database[i].name == itemName) {
                 //do cool stuff
-                return database[i];
+                return database[i].name;
+            } else {
+                return "too bad!";
             }
         }
     }

@@ -37,3 +37,6 @@ const ARMOR = [
 ]
 
 export default { ARMOR };
+
+//potentially convert the ARMOR array to an Object instead and seatch through that.
+//add another Object called "Amory" that will contain all of the smaller objects.
