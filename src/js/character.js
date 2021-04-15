@@ -1,4 +1,5 @@
 export default class Character {
+
   constructor (name, role, level, physical, mental, hp, inventory) {
     this.name=name;
     this.role=role;

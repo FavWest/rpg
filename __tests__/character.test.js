@@ -74,12 +74,4 @@ describe('Character', () => {
     myFighter.mentalDefBonus = 3;
     expect(slime.attack(myFighter, "mental", 8)).toEqual(3);
   });
-  // test ('should change hp property based on damage taken', () => {
-    
-  // })
-  // test ('should return a value equal to mental for attack damage', () => {
-  //   let myFighter = new Character("Minx", "Mage", 1, 1, 4, 8, {skill: ["Hover/float"], weapons: ["apprentice staff"]});
-  //   expect(myFighter.mentalAttack()).toEqual(4);
-  // })
-
 });
