@@ -5,7 +5,22 @@ export default class World {
     this.items = {};
   }
 
+  findLocation(entity) {
+    let coordinates = [];
+    for (let i = 0; i < (this.board).length; i++) {
+      for (let j = 0; j < (this.board[i]).length; j++) {
+        if (this.board[i][j] === entity) {
+          coordinates = [i, j];
+          return coordinates;
+        } else {
+          return "NOPE";
+        }
+      }
+    }
+  }
+
   moveRight(){
+
   }
 }
 
