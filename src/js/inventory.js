@@ -59,6 +59,7 @@ export default class Inventory {
     }
 };
 
+//adfsfafsdfsdafsf
 //testytest
 //chestPlate {
 //type: armor
