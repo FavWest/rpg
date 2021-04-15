@@ -14,4 +14,11 @@ describe('Tile', () => {
     expect(newTile.hasItem).toEqual(false);
   });
 
+  test ('we should be able to access the details for a player that is on the tile' ,()=> {
+    const trog= {
+      name: "trog",
+    }
+    const newTile = new Tile(false, trog, false, false );
+    expect(newTile.hasPlayer.name).toEqual("trog");
+  });
 });
