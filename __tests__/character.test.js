@@ -70,7 +70,10 @@ describe('Character', () => {
     myFighter.physicalDefBonus = 3;
     expect(slime.attack(myFighter, "physical", 8)).toEqual(2);
   });
-
+  test ('should subtract the mentalDefBonus from the mental attack()', () => {;
+    myFighter.mentalDefBonus = 3;
+    expect(slime.attack(myFighter, "mental", 8)).toEqual(3);
+  });
   // test ('should change hp property based on damage taken', () => {
     
   // })
