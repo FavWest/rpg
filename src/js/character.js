@@ -41,7 +41,7 @@ export default class Character {
 
   attack(target, attackType, damage) {
     if (attackType==="physical"){
-      damage -= target.physical; // + target.physicalDefBonus
+      damage -= target.physical + target.physicalDefBonus; // + target.physicalDefBonus
     } else {
       damage -= target.mental; // + target.mentalDefBonus
     }
