@@ -67,7 +67,7 @@ describe('Character', () => {
     expect(myFighter.mentalAttack(slime)).toEqual(5);
   });
 
-  // test ('shoud change hp property based on damage taken', () => {
+  // test ('should change hp property based on damage taken', () => {
     
   // })
   // test ('should return a value equal to mental for attack damage', () => {
