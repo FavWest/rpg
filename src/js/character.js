@@ -8,7 +8,8 @@ export default class Character {
     this.currentHP=hp;
     this.maxHP=hp;
     this.inventory=inventory;
-    this.equippedArmor = 0;
+    this.physicalDefBonus = 0;
+    this.mentalDefBonus = 0;
     this.physicalDmgBonus = 0;
     this.mentalDmgBonus = 0;
   }
@@ -45,6 +46,7 @@ export default class Character {
       damage -= target.mental; // + target.mentalDefBonus
     }
     target.lowerCurrentHP(damage);
+    console.log(damage);
     return damage;
   }
 };
