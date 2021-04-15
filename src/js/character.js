@@ -12,9 +12,8 @@ export default class Character {
     this.physicalDmgBonus = 0;
   }
 
-
   physicalAttack() {
-    let damage=this.physical; // + this.physicalDmgBonus
+    let damage=this.physical + this.physicalDmgBonus; // + this.physicalDmgBonus
     //this.attack(target, "physical", damage);
     return damage;
   }

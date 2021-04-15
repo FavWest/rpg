@@ -62,6 +62,10 @@ describe('Character', () => {
     myFighter.physicalDmgBonus = 3;
     expect(myFighter.physicalAttack(slime)).toEqual(6);
   });
+  test ('should add the mentalDmgBonus to the mental attack()', () => {
+    myFighter.mentalDmgBonus = 3;
+    expect(myFighter.mentalAttack(slime)).toEqual(5);
+  });
 
   // test ('shoud change hp property based on damage taken', () => {
     
