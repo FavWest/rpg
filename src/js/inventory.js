@@ -1,4 +1,4 @@
-import ARMOR from './armor.js';
+import db_armor from './armor.js';
 
 export default class Inventory {
     constructor(skills, armor, weapons, consumables) {
@@ -36,6 +36,7 @@ export default class Inventory {
         let armorArray = this.armor; // sets "armorArray" to a property on the character
         let weaponArray = this.weapons;
         let consumablesArray = this.consumables;
+        console.log("Here's the item we're using in acquireItem(item): " + item.name)
         if (item.type === "armor") {
             armorArray.push(item);
         } else if (item.type === "weapon") {
@@ -49,11 +50,9 @@ export default class Inventory {
     };
     findItem(database, itemName) {
         for (let i = 0; i < database.length; i++) {
-            if (database[i].name == itemName) {
-                //do cool stuff
-                return database[i].name;
-            } else {
-                return "too bad!";
+            let currentItem = database[i];
+            if (currentItem.name === itemName) {
+                return currentItem;
             }
         }
     }

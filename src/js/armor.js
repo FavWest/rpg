@@ -1,4 +1,4 @@
-const ARMOR = [
+const db_armor = [
     {
         name: "Light Armor",
         type: "armor",
@@ -14,7 +14,7 @@ const ARMOR = [
         mental: -2,
     },
     {
-        name: "Yearning Bone Batteplate",
+        name: "Yearning Bone Battleplate",
         type: "armor",
         class: "universal",
         physical: 2,
@@ -36,7 +36,7 @@ const ARMOR = [
     },
 ]
 
-export default { ARMOR };
+export default db_armor;
 
 //potentially convert the ARMOR array to an Object instead and seatch through that.
 //add another Object called "Amory" that will contain all of the smaller objects.
