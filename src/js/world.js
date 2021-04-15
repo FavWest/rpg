@@ -1,9 +1,13 @@
 export default class World {
   constructor(board, characters, items) {
-    this.board = {};
+    this.board = board;
     this.characters = {};
     this.items = {};
   }
+
+
+//   moveRight(){
+//   }
 }
 
 // sandbox = {

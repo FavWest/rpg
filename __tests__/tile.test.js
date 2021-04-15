@@ -21,4 +21,13 @@ describe('Tile', () => {
     const newTile = new Tile(false, trog, false, false );
     expect(newTile.hasPlayer.name).toEqual("trog");
   });
+
+  test ('we should be able to push a player-object onto a tile player-array' , ()=> {
+    const trog = {
+      name: "trog",
+    }
+    const newTile = new Tile(false, false, false, false);
+    ((newTile.entities).players).push(trog);
+    expect((newTile.entities).players[0]).toEqual(trog);
+  });
 });
