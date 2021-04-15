@@ -43,10 +43,9 @@ export default class Character {
     if (attackType==="physical"){
       damage -= target.physical + target.physicalDefBonus; // + target.physicalDefBonus
     } else {
-      damage -= target.mental; // + target.mentalDefBonus
+      damage -= target.mental + target.mentalDefBonus; // + target.mentalDefBonus
     }
     target.lowerCurrentHP(damage);
-    console.log(damage);
     return damage;
   }
 };
