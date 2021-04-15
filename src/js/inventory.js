@@ -1,6 +1,8 @@
 import db_armor from './armor.js';
 import db_weapons from './weapons';
 import db_consumables from './consumables.js';
+import db_roles from './roles.js';
+import db_monsters from './monsters.js'
 
 export default class Inventory {
     constructor(skills, armor, weapons, consumables) {

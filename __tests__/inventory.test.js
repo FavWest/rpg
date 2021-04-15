@@ -8,13 +8,6 @@ describe('Inventory', () => {
         expect(newInventory.skills.swim).toEqual(false);
         expect(newInventory.skills.climb).toEqual(false);
     });
-    // test("it should create a new inventory object with the users input.", () => {
-    // const newInventory = new Inventory("swim", "leather wraps", "broadsword", "potion");
-    // expect(newInventory.skills).toEqual("swim");
-    // expect(newInventory.armor).toEqual("leather wraps");
-    // expect(newInventory.weapons).toEqual("broadsword");
-    // expect(newInventory.consumables).toEqual("potion");
-    // });
     test("it should enable a skill", () => {
         const newInventory = new Inventory();
         expect(newInventory.enableSkill("swim"));
@@ -55,7 +48,6 @@ describe('Inventory', () => {
         expect(newInventory.acquireItem(armorItem));
         expect(newInventory.armor[0].name).toEqual("Yearning Bone Battleplate");
     });
-
     test("it should push a weapon type to the weaponArray", () => {
         const newInventory = new Inventory();
         const weaponItem = { type: "weapon" };
