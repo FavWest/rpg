@@ -1,11 +1,12 @@
 import Inventory from "./inventory.js";
+import db_roles from "./roles.js";
 
 export default class Character {
 
     constructor(name, role, level, physical, mental, hp, inventory) { //should be able to pass in the value of the character and have it pull stats from roles. e.g. Character("warrior")
         this.name = name;
         this.role = role;
-        this.level = level;
+        this.level = 1;
         this.physical = physical;
         this.mental = mental;
         this.currentHP = hp;
@@ -51,8 +52,26 @@ export default class Character {
         target.lowerCurrentHP(damage);
         return damage;
     }
-};
 
+    chooseRole(roleSelect) {
+        const db = db_roles
+        for (let i = 0; i < db.length; i++) {
+            let currentRole = db[i];
+            if (currentRole.role === roleSelect) {
+                this.role = roleSelect;
+                this.physical = currentRole.physical;
+                this.mental = currentRole.mental;
+                this.currentHP = currentRole.currentHP;
+                this.maxHP = currentRole.maxHP;
+                this.physicalDefBonus = currentRole.physicalDefBonus;
+                this.mentalDefBonus = currentRole.mentalDefBonus;
+                this.physicalDmgBonus = currentRole.physicalDmgBonus;
+                this.mentalDmgBonus = currentRole.mentalDmgBonus;
+                break
+            }
+        }
+    }
+};
 //when new Character is created, it should pull the default settings from the roles.js file and should also create a new Inventory object from Inventory.js constructor.
 
-//choose what type of character you want i.e. warrior, mage, rougue etc and it will populate the default stats listed from roles.js
+//choose what type of character you want i.e. warrior, mage, rougue etc and it will populate the default stats listed from roles.jsfindItem(database, itemName) {

@@ -5,13 +5,13 @@ describe('Character', () => {
     let slime;
 
     beforeEach(() => {
-        myFighter = new Character("Trog", "Warrior", 1, 3, 2, 10, { skills: ["climb"], weapons: ["plain sword"] });
+        myFighter = new Character("Trog", "warrior", 1, 3, 2, 10, { skills: ["climb"], weapons: ["plain sword"] });
         slime = new Character("Slime", "slime", 1, 1, 1, 5, {});
     });
 
     test.skip('should create a Character object', () => {
         expect(myFighter.name).toEqual("Trog");
-        expect(myFighter.role).toEqual("Warrior");
+        expect(myFighter.role).toEqual("warrior");
         expect(myFighter.level).toEqual(1);
         expect(myFighter.physical).toEqual(3);
         expect(myFighter.mental).toEqual(2);
@@ -82,10 +82,12 @@ describe('Roles', () => {
     let myFighter;
 
     beforeEach(() => {
-        myFighter = new Character("warrior");
+        myFighter = new Character("Trog");
+        myFighter.chooseRole("warrior")
     });
 
     test('it should create a new character and apply role.', () => {
+        console.log(myFighter)
         expect(myFighter.role).toEqual("warrior");
     })
 })
