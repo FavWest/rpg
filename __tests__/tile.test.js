@@ -44,5 +44,15 @@ describe('Tile', () => {
     ((newTile.entities).players).push(trog);
     ((newTile.entities).players).pop();
     expect ((newTile.entities).players).toEqual([ugg])
-  })
-});                                   
+  });
+
+  test ('should move player from one tile to another' , () => {
+    const leftTile = new Tile(false, false, false, false);
+    const rightTile = new Tile(false, false, false, false);
+    const trog = { name: "trog" };
+
+    ((leftTile.entities).players).push(trog);
+    leftTile.moveEntity(trog, "right");
+    expect ((rightTile.entities).players[0]).toEqual(trog);
+  });
+});

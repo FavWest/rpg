@@ -11,6 +11,10 @@ export default class Tile {
     }
   }
   
+  moveEntity(entity, moveDirection) {
+
+  }
+
 }
 
 //let basic = new Tile(false, false, false, false)
