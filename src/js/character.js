@@ -2,7 +2,7 @@ import Inventory from "./inventory.js";
 
 export default class Character {
 
-    constructor(name, role, level, physical, mental, hp, inventory) {
+    constructor(name, role, level, physical, mental, hp, inventory) { //should be able to pass in the value of the character and have it pull stats from roles. e.g. Character("warrior")
         this.name = name;
         this.role = role;
         this.level = level;
