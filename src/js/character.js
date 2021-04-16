@@ -67,6 +67,7 @@ export default class Character {
                 this.mentalDefBonus = currentRole.mentalDefBonus;
                 this.physicalDmgBonus = currentRole.physicalDmgBonus;
                 this.mentalDmgBonus = currentRole.mentalDmgBonus;
+                this.inventory.skills.climb = currentRole.climb
                 break
             }
         }
