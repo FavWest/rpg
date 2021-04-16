@@ -1,6 +1,5 @@
 const db_monsters = [
     {
-        name: "",
         role: "slime",
         level: 1,
         physical: 1,
@@ -13,7 +12,6 @@ const db_monsters = [
         mentalDmgBonus: 0,
     },
     {
-        name: "",
         role: "goblin",
         level: 1,
         physical: 3,
@@ -26,7 +24,6 @@ const db_monsters = [
         mentalDmgBonus: 0,
     },
     {
-        name: "",
         role: "dragon",
         level: 1,
         physical: 5,

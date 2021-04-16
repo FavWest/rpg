@@ -92,5 +92,6 @@ describe('Roles', () => {
 
     test('it should enable base skills to be true based on roleSelect().', () => {
         expect((myFighter.inventory).skills.climb).toEqual(true)
+        console.log(myFighter)
     })
 })
