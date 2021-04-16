@@ -1,0 +1,43 @@
+const db_monsters = [
+    {
+        name: "",
+        role: "slime",
+        level: 1,
+        physical: 1,
+        mental: 1,
+        currentHP: 5,
+        maxHP: 5,
+        physicalDefBonus: 0,
+        mentalDefBonus: 0,
+        physicalDmgBonus: 0,
+        mentalDmgBonus: 0,
+    },
+    {
+        name: "",
+        role: "goblin",
+        level: 1,
+        physical: 3,
+        mental: 1,
+        currentHP: 8,
+        maxHP: 8,
+        physicalDefBonus: 0,
+        mentalDefBonus: 0,
+        physicalDmgBonus: 0,
+        mentalDmgBonus: 0,
+    },
+    {
+        name: "",
+        role: "dragon",
+        level: 1,
+        physical: 5,
+        mental: 5,
+        currentHP: 20,
+        maxHP: 20,
+        physicalDefBonus: 0,
+        mentalDefBonus: 0,
+        physicalDmgBonus: 0,
+        mentalDmgBonus: 0,
+    },
+]
+
+export default db_monsters
