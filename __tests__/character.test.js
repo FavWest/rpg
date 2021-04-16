@@ -9,7 +9,7 @@ describe('Character', () => {
         slime = new Character("Slime", "slime", 1, 1, 1, 5, {});
     });
 
-    test.skip('should create a Character object', () => {
+    test('should create a Character object', () => {
         expect(myFighter.name).toEqual("Trog");
         expect(myFighter.role).toEqual("warrior");
         expect(myFighter.level).toEqual(1);
@@ -18,7 +18,7 @@ describe('Character', () => {
         expect(myFighter.currentHP).toEqual(10);
         expect(myFighter.maxHP).toEqual(10);
         expect(myFighter.inventory.skills).toEqual({ "acrobatics": false, "climb": false, "diplomacy": false, "dual wield": false, "fly": false, "heal": false, "intimidate": false, "perception": false, "steal": false, "stealth": false, "swim": false });
-        expect(myFighter.inventory.weapons).toEqual(["plain sword"]);
+        expect(myFighter.inventory.weapons).toEqual([]);
     });
 
     test('should return a value equal to physical for attack damage', () => {
@@ -87,12 +87,10 @@ describe('Roles', () => {
     });
 
     test('it should create a new character and apply role.', () => {
-        console.log(myFighter)
         expect(myFighter.role).toEqual("warrior");
     })
 
     test('it should enable base skills to be true based on roleSelect().', () => {
-        console.log(myFighter)
         expect((myFighter.inventory).skills.climb).toEqual(true)
     })
 })
